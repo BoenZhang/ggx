@@ -1,0 +1,128 @@
+.screen2 {
+  position: relative;
+}
+
+.screen2-bg {
+  background: transparent;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 640px;
+  height: 1008px;
+  margin-left: -320px;
+  margin-top: -504px;
+  z-index: 1;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  overflow: visible;
+  background: url("../img/screen-two/bg-up.png") 34px 88px no-repeat;
+}
+
+.screen2-bg-down {
+  background: transparent;
+  background-size: auto 100% ! important;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 640px;
+  height: 1008px;
+  margin-left: -320px;
+  margin-top: -504px;
+  z-index: -1;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  overflow: visible;
+  background: url("../img/screen-two/bg-down.png");
+  background-size: cover;
+}
+
+.screen2-btn {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  border-radius: 110px;
+  text-align: center;
+  line-height: 220px;
+  font-size: 64px;
+  color: #FFFFFF;
+}
+
+.screen2__boy {
+  left: 303px;
+  top: 257px;
+}
+
+.screen2__girl {
+  left: 138px;
+  top: 406px;
+}
+
+.hands-two {
+  transform: translate(228px, 526px);
+  height: 107px;
+  position: absolute;
+  width: 68px;
+  background: url("../img/screen-two/hands.png");
+  animation: hands-move-two 2s linear infinite;
+}
+
+.music-icon {
+  position: fixed;
+  display: none;
+  top: 10px;
+  right: 10px;
+  width: 42px;
+  height: 42px;
+  background: url("../img/screen-two/music-icon.png");
+  transform: scale(0.5);
+}
+
+.music-animation {
+  animation: rotate-m 1s linear infinite;
+}
+
+@-webkit-keyframes rotate-m {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0.5) translate3d(0, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg) scale(0.5) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes rotate-m {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0.5) translate3d(0, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg) scale(0.5) translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes hands-move-two {
+  0% {
+    -webkit-transform: translate(228px, 626px);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate(228px, 526px);
+    opacity: .2;
+  }
+}
+
+@keyframes hands-move-two {
+  0% {
+    transform: translate(228px, 626px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(228px, 526px);
+    opacity: .2;
+  }
+}

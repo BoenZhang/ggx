@@ -1,0 +1,108 @@
+.screen4 {
+  position: relative;
+}
+
+#canvas {
+  background: transparent;
+  background-size: auto 100% ! important;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 640px;
+  height: 1080px;
+  margin-left: -320px;
+  margin-top: -540px;
+  z-index: 1;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  overflow: visible;
+}
+
+.canvas-mask {
+  background: transparent;
+  background-size: auto 100% ! important;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 640px;
+  height: 1080px;
+  margin-left: -320px;
+  margin-top: -540px;
+  z-index: 3;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  overflow: visible;
+}
+
+.screen4-bg {
+  background: transparent;
+  background-size: auto 100% ! important;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 640px;
+  height: 1008px;
+  margin-left: -320px;
+  margin-top: -504px;
+  z-index: 2;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  overflow: visible;
+}
+
+.rotate {
+  height: 120px;
+  width: 363px;
+  font-weight: 400;
+  color: #5308c3;
+  text-align: center;
+  font-size: 36px;
+  margin: 366px auto;
+  background: url("../img/screen-four/rotate.png") bottom center no-repeat;
+}
+
+.hands-four {
+  transform: translate(180px, -366px);
+  height: 107px;
+  position: absolute;
+  width: 68px;
+  background: url("../img/screen-two/hands.png");
+  animation: hands-move-four 3s linear infinite;
+}
+
+@-webkit-keyframes hands-move-four {
+  100% {
+    -webkit-transform: translate(180px, -380px);
+    opacity: 1;
+  }
+
+  50% {
+    -webkit-transform: translate(290px, -366px);
+    opacity: 1;
+  }
+
+  0% {
+    -webkit-transform: translate(400px, -380px);
+    opacity: 0;
+  }
+}
+
+@keyframes hands-move-four {
+  100% {
+    transform: translate(180px, -380px);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(290px, -366px);
+    opacity: 1;
+  }
+
+  0% {
+    transform: translate(400px, -380px);
+    opacity: 0;
+  }
+}

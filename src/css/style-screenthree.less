@@ -1,0 +1,227 @@
+.screen3 {
+  position: relative;
+}
+
+.screen3-bg {
+
+  background: transparent;
+  background-size: auto 100% ! important;
+  background-position: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 640px;
+  height: 1008px;
+  margin-left: -320px;
+  margin-top: -504px;
+  z-index: 1;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  overflow: visible;
+}
+
+.screen3-bg-down {
+
+  background: transparent;
+  background-size: auto 100% ! important;
+  background-position: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 640px;
+  height: 1008px;
+  margin-left: -320px;
+  margin-top: -504px;
+  z-index: -1;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  overflow: visible;
+  background: url("../img/screen-three/bg.png") center;
+  background-size: cover;
+}
+
+.screen3-header {
+  height: 137px;
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  background: url("../img/screen-three/score-bg.png") center no-repeat;
+}
+
+.score {
+  width: 566px;
+  height: 38px;
+  width: 0;
+  top: 45px;
+  color: #FFFFFF;
+  line-height: 38px;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: right;
+  left: 37px;
+  z-index: 1;
+  position: absolute;
+  background: url("../img/screen-three/score.png") no-repeat;
+}
+
+.score-mask {
+  width: 575px;
+  height: 57px;
+  top: 31px;
+  z-index: 2;
+  left: 34px;
+  position: absolute;
+  background: url("../img/screen-three/score-mask.png");
+}
+
+.screen3-qa {
+  margin: 160px 80px 50px;
+  height: 560px;
+}
+
+.question {
+  color: #FFFFFF;
+  padding-right: 40px;
+  font-size: 40px;
+  display: flex;
+  height: 180px;
+}
+
+.answer {
+  position: relative;
+  z-index: 20;
+}
+
+.answer .answer-btn {
+  //height: 120px;
+  line-height: 65px;
+  padding-left: 50px;
+  font-size: 21px;
+  color: #FFFFFF;
+  margin-bottom: 55px;
+}
+
+.answer1 {
+  background: url("../img/answer/answer-btn1.png") no-repeat;
+}
+
+.answer2 {
+  background: url("../img/answer/answer-btn2.png") no-repeat;
+}
+
+.answer3 {
+  background: url("../img/answer/answer-btn3.png") no-repeat;
+}
+
+.gene-btn {
+  background: url("../img/screen-three/generate-btn.png") no-repeat;
+  width: 293px;
+  height: 76px;
+  margin-left: 100px;
+  position: relative;
+  z-index: 22;
+  display: none;
+}
+
+.screen3-wave {
+  height: 364px;
+  width: 100%;
+  z-index: 9;
+  position: absolute;
+  bottom: 0;
+  background: url("../img/screen-three/wave.png");
+}
+
+.screen3-wave-up {
+  height: 476px;
+  width: 100%;
+  position: absolute;
+  z-index: 19;
+  background: url("../img/screen-three/bg-up.png")
+}
+
+.fruit {
+  position: absolute;
+  transition: transform 2s linear;
+  z-index: 11;
+  display: none;
+}
+
+.screen3-fruit .fruit {
+  display: block;
+}
+
+.f1 {
+  transform: translate(100px, -1228px) translate3d(0, 0, 0);
+  background: url("../img/fruits/fruit1.png");
+  height: 198px;
+  width: 169px;
+}
+
+.f2 {
+  transform: translate(560px, -1528px) translate3d(0, 0, 0);
+  background: url("../img/fruits/fruit2.png");
+  width: 77px;
+  height: 72px;
+}
+
+.screen3-fruit .f3 {
+  display: none;
+  right: 1px;
+  background: url("../img/fruits/fruit3.png");
+  width: 204px;
+  height: 150px;
+}
+
+.f4 {
+  z-index: 22;
+  transform: translate(530px, -1528px) translate3d(0, 0, 0);
+  background: url("../img/fruits/fruit4.png");
+  width: 110px;
+  height: 148px;
+}
+
+.f5 {
+  z-index: 22;
+  transform: translate(230px, -1528px) translate3d(0, 0, 0);
+  background: url("../img/fruits/fruit5.png");
+  width: 106px;
+  height: 108px;
+}
+
+.screen3-fruit .f6 {
+  display: none;
+  z-index: 22;
+  right: 100px;
+  background: url("../img/fruits/fruit6.png");
+  width: 74px;
+  height: 41px;
+}
+
+.f7 {
+  z-index: 11;
+  transform: translate(230px, -1528px) translate3d(0, 0, 0);
+  background: url("../img/fruits/fruit7.png");
+  width: 79px;
+  height: 74px;
+}
+
+.screen3-fruit .f8 {
+  display: none;
+  z-index: 22;
+  left: 90px;
+  background: url("../img/fruits/fruit8.png");
+  width: 222px;
+  height: 41px;
+}
+
+.screen3-fruit .f9 {
+  display: none;
+  z-index: 22;
+  left: 300px;
+  background: url("../img/fruits/fruit9.png");
+  width: 84px;
+  height: 68px;
+}
