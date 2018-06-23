@@ -25,7 +25,7 @@ var quesType = -1,
     score = 0,
     // score = 50,
     canSelect = true,
-    screenCount = 5,
+    screenCount = 4,
     $musicbg = $('#musicbg'),
     $musicIcon = $('.music-icon'),
     sex,
@@ -71,73 +71,18 @@ function loadStepFour() {
     loadImagesNormal(picArr);
 }
 
+
 function init() {
     FastClick.attach(document.body);
     var screenScale = screenResize();
     window.onresize = screenResize;
 
-    // init video
-    var video = new WxMoment.Video({
-        //请联系接口人确认视频清晰度已调至高清版本
-        //如果要定制“播放按钮”的样式，请使用 CSS 覆盖 .tvp_overlay_play 和 .tvp_button_play 即可
-
-        vid: "c06966b2bbh", //视频 vid 取自视频地址：//v.qq.com/page/a/t/t/a0016gys8ct.html
-        // pic: "http://localhost:8080/img/video.png", //设置视频默认缩略图
-        oninited: function () {
-            //播放器在视频载入完毕触发
-            // pageSlider.moveTo(3);
-            // video.getPlayer().play();
-
-            setTimeout(function () {
-                video.getPlayer().play();
-            }, 100)
-        },
-        onplaying: function () {
-            //播放器真正开始播放视频第一帧画面时
-            loadImagesNormal(["../img/screen-two/bg.png", "../img/screen-two/bg-up.png", "../img/screen-two/hands.png", "../img/screen-two/music-icon.png"]);
-        },
-        onpause: function () {
-            //播放器触发暂停时，目前只针对HTML5播放器有效
-        },
-        onresume: function () {
-            //暂停后继续播放时触发
-        },
-        onallended: function () {
-            //播放器播放完毕时
-            console.log('vedio finish')
-            pageSlider.next();
-            $musicIcon.css("display", "block");
-            $musicIcon.attr("class", "music-icon music-animation")
-            $musicbg.get(0).play();
-        },
-        onfullscreen: function (isfull) {
-            //onfullscreen(isfull) 播放器触发全屏/非全屏时，参数isfull表示当前是否是全屏
-        }
-    });
-
-    //可以通过以下方式控制播放/暂停
-    // video.getPlayer().play();
-    //video.getPlayer().pause();
-
-    //以下可以拉起iOS全屏播放
-    //video.getPlayer().enterFullScreen();
-
     //init music
     document.addEventListener("WeixinJSBridgeReady", function () {
         $musicbg.get(0).play();
-
-        setTimeout(function () {
-            video.getPlayer().play();
-            $musicbg.get(0).pause();
-        }, 10)
     }, false);
     document.addEventListener('YixinJSBridgeReady', function () {
         $musicbg.get(0).play();
-
-        setTimeout(function () {
-            video.getPlayer().play();
-            $musicbg.get(0).pause();
-        }, 10)
     }, false);
 
     $musicIcon.click(function (e) {
@@ -155,9 +100,15 @@ function init() {
         pages: $('.screen')
     });
 
+    // pageSlider.moveTo(2)
+
     // hide loading mask
     var $loadingMask = $('#loadingMask');
     $loadingMask.css("display", "none");
+
+    $musicIcon.css("display", "block");
+    $musicIcon.attr("class", "music-icon music-animation")
+    $musicbg.get(0).play();
 
     // screen two
     var $sc2_boy_btn = $('.screen2__boy'),
@@ -332,6 +283,8 @@ function init() {
         $rotate = $('.rotate'),
         $canvasMask = $('.canvas-mask'),
         ctx = canvasElement.getContext('2d'),
+        $screen4 = $('.screen4'),
+        $screen5 = $('.screen5'),
         img = new Image(),
         imgIndex = 0,
         count = 0,
@@ -354,8 +307,13 @@ function init() {
 
         if (imgIndex == 33) {
             setTimeout(function () {
-                pageSlider.next();
-            }, 600)
+                $screen4.css("opacity", ".2");
+            }, 200)
+            setTimeout(function () {
+                // pageSlider.next();
+                pageSlider.moveTo(3, true)
+                $screen5.css("opacity", "1");
+            }, 1700)
             return
         }
 
@@ -378,15 +336,6 @@ function init() {
     })
 
     $canvasMask.on('touchmove', function (e) {
-        // if (e.touches[0].pageX - touchstart.pageX > 80 && Math.abs(e.touches[0].pageY - touchstart.pageY) < 10) {
-        //     toRight = true;
-        // }
-        // else if (e.touches[0].pageX - touchstart.pageX > 40 && e.touches[0].pageY - touchstart.pageY > 40) {
-        //     toTop = true;
-        // }
-        // else if (e.touches[0].pageX - touchstart.pageX > 40 && e.touches[0].pageY - touchstart.pageY < -40) {
-        //     toDown = true;
-        // }
         if (Math.abs(e.touches[0].pageX - touchstart.pageX) > 80 && Math.abs(e.touches[0].pageY - touchstart.pageY) < 10) {
             console.log('1')
             toRight = 1;
@@ -415,23 +364,6 @@ function init() {
         }
     })
 
-    // $canvasMask.on('touchend', function (e) {
-    //     if (Math.abs(e.changedTouches[0].pageX - touchstart.pageX) < 20 && Math.abs(e.changedTouches[0].pageY - touchstart.pageY) < 20) {
-    //         if (new Date() - startTime1 < 800) {
-    //             speed = 28
-    //         }else {
-    //             speed = 30
-    //         }
-    //         speed = 8
-    //         $rotate.css("display", "none");
-    //         $canvasMask.css("display", "none");
-    //         setTimeout(function () {
-    //             startTime = new Date();
-    //             run();
-    //         }, 600)
-    //     }
-    // })
-
     // screen five
     var $shareBtn = $('.share-btn'),
         $shareFont = $('.screen5-font');
@@ -454,4 +386,4 @@ function init() {
 }
 
 
-loadImages([]);
+loadImages(["../img/screen-two/bg.png", "../img/screen-two/bg-up.png", "../img/screen-two/hands.png", "../img/screen-two/music-icon.png"]);

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>果果昔</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="apple-mobile-web-app-capable" content="no"/>
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css"/>
+</head>
+<body>
+<div class="wrap">
+    <section class="screen screen2" data-lock-prev="true" data-lock-next="true">
+        <div class="screen2-bg">
+            <div class="screen2-btn screen2__boy" data-sex="boy">Boy</div>
+            <div class="screen2-btn screen2__girl" data-sex="boy">Girl</div>
+            <div class="hands-two"></div>
+        </div>
+        <audio id="musicbg" loop="loop" autoplay="autoplay">
+            <source src="../media/love.mp3" type="audio/mpeg">
+        </audio>
+        <div class="screen2-bg-down"></div>
+    </section>
+    <section class="screen screen3" data-lock-prev="true" data-lock-next="true">
+        <div class="screen3-bg">
+            <div class="screen3-header">
+                <div class="score"></div>
+                <div class="score-mask"></div>
+            </div>
+            <div class="screen3-qa">
+                <div class="question">
+                    <div class="num">1、</div>
+                    <div class="contq">业余时间你会选择如何度过？</div>
+                </div>
+                <div class="answer">
+                    <div class="answer-btn answer1" data-answer="1">A宅在家，吃饭叫外卖，这辈子都不可能出门</div>
+                    <div class="answer-btn answer2" data-answer="2">B学习更多东西、健身保持好的身体状态</div>
+                    <div class="answer-btn answer3" data-answer="3">C一切随缘，有事做就做，没事就休息</div>
+                </div>
+                <div class="gene-btn"></div>
+            </div>
+            <div class="screen3-wave"></div>
+            <div class="screen3-wave-up"></div>
+            <div class="fruit f1"></div>
+            <div class="fruit f2"></div>
+            <div class="fruit f3"></div>
+            <div class="fruit f4"></div>
+            <div class="fruit f5"></div>
+            <div class="fruit f6"></div>
+            <div class="fruit f7"></div>
+            <div class="fruit f8"></div>
+            <div class="fruit f9"></div>
+        </div>
+        <div class="screen3-bg-down"></div>
+    </section>
+    <section class="screen screen4" data-lock-prev="true" data-lock-next="true">
+        <div class="screen4-bg">
+            <div class="rotate">转出你的果力值</div>
+            <div class="hands-four"></div>
+        </div>
+        <canvas id="canvas" width="640" height="1080"></canvas>
+        <div class="canvas-mask"></div>
+    </section>
+    <section class="screen screen5" data-lock-prev="true">
+        <div class="screen5-bg">
+            <div class="screen5-btn">
+                <div class="share-btn"></div>
+                <div class="jd-btn"></div>
+            </div>
+        </div>
+        <div class="screen5-bg-down"></div>
+        <div class="screen5-font">长按图片保存或者截图发至朋友圈</div>
+        <img src="" alt="" class="screen5-share-bg">
+    </section>
+</div>
+
+<div class="music-icon"></div>
+
+<div id="loadingMask">
+    <div class="loader">
+        <div class="linner one"></div>
+        <div class="linner two"></div>
+        <div class="linner three"></div>
+    </div>
+    <div class="spanloader">已加载<span id="isload">0</span>%</div>
+</div>
+
+<script src="http://wximg.qq.com/wxp/libs/wxmoment/0.0.4/wxmoment.min.js"></script>
+
+<!--以下为 js 代码压缩指令格式范例-->
+<script src="../js/build.js"></script>
+</body>
+</html>
